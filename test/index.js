@@ -446,25 +446,21 @@ describe('Riot queue', function() {
 
   describe('Regions', function() {
     it('should be exposed on riotRequest', function() {
-      var riotRequest = new RiotRequest('fake');
-      assert.ok(riotRequest.REGIONS.indexOf('euw') !== -1);
+      assert.ok(RiotRequest.REGIONS.indexOf('euw') !== -1);
     });
   });
 
   describe('Platforms', function() {
     it('should be exposed on riotRequest', function() {
-      var riotRequest = new RiotRequest('fake');
-      assert.ok(riotRequest.PLATFORMS.indexOf('EUW1') !== -1);
+      assert.ok(RiotRequest.PLATFORMS.indexOf('EUW1') !== -1);
     });
 
     it('should be available on riotRequest', function() {
-      var riotRequest = new RiotRequest('fake');
-      assert.ok(riotRequest.getPlatformFromRegion('euw'), 'EUW1');
+      assert.ok(RiotRequest.getPlatformFromRegion('euw'), 'EUW1');
     });
 
     it('should be available on riotRequest with any casing', function() {
-      var riotRequest = new RiotRequest('fake');
-      assert.ok(riotRequest.getPlatformFromRegion('EUW'), 'EUW1');
+      assert.ok(RiotRequest.getPlatformFromRegion('EUW'), 'EUW1');
     });
   });
 });
